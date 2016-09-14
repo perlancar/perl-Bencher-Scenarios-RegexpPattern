@@ -8,7 +8,11 @@ use strict;
 use warnings;
 
 #our @modules = do { require App::lcpan::Call; @{ App::lcpan::Call::call_lcpan_script(argv=>["modules", "--namespace", "Regexp::Pattern"])->[2] } }; # PRECOMPUTE
-our @modules = qw(Regexp::Pattern Regexp::Pattern::YouTube);
+our @modules = qw(
+                     Regexp::Pattern
+                     Regexp::Pattern::RegexpCommon
+                     Regexp::Pattern::YouTube
+             );
 
 our $scenario = {
     summary => 'Benchmark module startup overhead of Regexp::Pattern modules',
